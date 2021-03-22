@@ -34,7 +34,7 @@ const PageTitleStyle = styled.h2`
     }
   }
   @media (max-width: 380px) {
-    font-size: 28px;
+    font-size: 30px;
     ::before {
       width: 80px;
       height: 5px;

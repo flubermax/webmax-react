@@ -43,6 +43,11 @@ const Header = () => {
           </div>
           <ul className={visibleMenu ? 'active navbar__menu' : 'navbar__menu'}>
             <li onClick={menuItemClick}>
+              <NavLink to="/" exact={true}>
+                <i className="fa fa-home"></i> <span className="navbar__menu__description">Главная</span>
+              </NavLink>
+            </li>
+            <li onClick={menuItemClick}>
               <NavLink to="/services">
                 <i className="fa fa-keyboard"></i> <span className="navbar__menu__description">Услуги</span>
               </NavLink>

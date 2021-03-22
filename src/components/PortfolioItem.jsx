@@ -15,7 +15,7 @@ const PortfolioItem = ({ index, text, folder }) => {
 }
 
 PortfolioItem.propTypes = {
-  index: PropTypes.number.isRequired,
+  index: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   folder: PropTypes.string.isRequired,
 }

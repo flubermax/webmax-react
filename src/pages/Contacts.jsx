@@ -63,7 +63,7 @@ const useInput = (initialValue, validations) => {
     setValue(e.target.value)
   }
 
-  const onBlur = (e) => {
+  const onBlur = () => {
     setDirty(true)
   }
 
@@ -87,6 +87,7 @@ const Contacts = () => {
   const email = useInput('', { isEmpty: true, isEmail: true })
   const theme = useInput('')
   const message = useInput('', { isEmpty: true, minLength: 10 })
+  const [formSuccess, setFormSuccess] = React.useState(false)
 
   const formData = (e) => {
     e.preventDefault()
@@ -100,6 +101,11 @@ const Contacts = () => {
     email.onClear('')
     theme.onClear('')
     message.onClear('')
+
+    setFormSuccess(true)
+    setTimeout(() => {
+      setFormSuccess(false)
+    }, 5000)
   }
 
   return (
@@ -135,7 +141,7 @@ const Contacts = () => {
           >
             Отправить
           </SubmitButton>
-          <div className="form__ok">Сообщение отправлено. Я скоро свяжусь с вами!</div>
+          {formSuccess && <div className="form__ok">Ваше сообщение отправлено!</div>}
         </Form>
 
         <div className="contact__socials">

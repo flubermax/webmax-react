@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -10,17 +10,22 @@ const Home = () => {
         frontend-разработчика
       </h1>
       <p>Верстка и доработка сайтов / интеграция с WordPress</p>
-      <Link to="/portfolio">
+      <NavLink to="/portfolio">
         <div className="firstScreen__button">
           <span className="firstScreen__buttonText">Смотреть работы</span>
           <span className="firstScreen__buttonWaves"></span>
         </div>
-      </Link>
+      </NavLink>
 
-      <div className="firstScreen__image">
-        WEB
-        <br />
-        MAX
+      <div className="cube__wrap">
+        <div className="cube">
+          <div className="cube__side front">WordPress</div>
+          <div className="cube__side back">jQuery</div>
+          <div className="cube__side right">SCSS</div>
+          <div className="cube__side left">JavaScript</div>
+          <div className="cube__side top">ReactJS</div>
+          <div className="cube__side bottom">Redux</div>
+        </div>
       </div>
     </div>
   )
