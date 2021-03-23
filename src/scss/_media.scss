@@ -119,6 +119,7 @@
   .container {
     justify-content: flex-start;
     max-width: none;
+    min-height: 0;
     padding: 30px 15px 0;
   }
   header {
@@ -261,6 +262,21 @@
     height: 250px;
     margin: 0 0 70px;
   }
+}
+
+@media (max-width: 500px) {
+  .form{
+    &__row {
+      flex-wrap: wrap;
+      .form__control {
+        width: 100%;
+      }
+    }    
+    &__submit{
+      width: 100%;
+    }
+  }
+  
 }
 
 @media (max-width: 380px) {

@@ -45,6 +45,8 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 30px 15px 30px 75px;
+  position: relative;
+  z-index: 1;
 }
 a {
   text-decoration: none;
@@ -148,12 +150,22 @@ h1 {
 
 /*--------services---------*/
 .price {
-  background: url('../assets/img/fonmysite.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  position: relative;
   color: #fff;
+  &:before{
+    background: url('../assets/img/fonmysite.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: 0;
+  }
 }
 
 /*---------about---------*/
@@ -161,6 +173,7 @@ h1 {
   color: #fff;
   &__wrap {
     display: flex;
+    padding-bottom: 20px;
   }
   &__image {
     flex: 0 0 250px;
@@ -289,12 +302,22 @@ h1 {
 /*-----------portfolio----------*/
 .portf {
   text-align: center;
-  background: url('../assets/img/comp2.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  position: relative;
   color: #fff;
+  &:before{
+    background: url('../assets/img/comp2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: ' ';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: 0;
+  }
 }
 .mywork__wrap {
   display: flex;
